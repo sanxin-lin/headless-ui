@@ -14,7 +14,7 @@ test("resolve import", async () => {
         "~/lib": ["./src/lib"],
       },
     })
-  ).toEqual("D:\\Users\\headless-ui\\Projects\\foobar\\src\\foo/bar")
+  ).toEqual("D:\\Users\\headless-ui\\Projects\\foobar\\src\\foo\\bar")
 
   expect(
     await resolveImport("~/components/foo/bar/baz", {
@@ -26,7 +26,7 @@ test("resolve import", async () => {
       },
     })
   ).toEqual(
-    "D:\\Users\\headless-ui\\Projects\\foobar\\src\\components\\foo/bar/baz"
+    "D:\\Users\\headless-ui\\Projects\\foobar\\src\\components\\foo\\bar\\baz"
   )
 
   expect(
@@ -39,7 +39,7 @@ test("resolve import", async () => {
       },
     })
   ).toEqual(
-    "D:\\Users\\headless-ui\\Projects\\foobar\\src\\app\\components\\foo/bar"
+    "D:\\Users\\headless-ui\\Projects\\foobar\\src\\app\\components\\foo\\bar"
   )
 
   // TODO 这里有 BUG 吧？
@@ -52,7 +52,7 @@ test("resolve import", async () => {
         lib: ["./src/lib"],
       },
     })
-  ).toEqual("/Users/headless-ui/Projects/foobar/lib/utils")
+  ).toEqual("\\Users\\headless-ui\\Projects\\foobar\\lib\\utils")
 })
 
 test("resolve import with base url", async () => {
