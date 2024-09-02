@@ -37,5 +37,6 @@
     "source.fixAll.stylelint": "explicit"
   },
   "css.lint.unknownAtRules": "ignore",
-  "i18n-ally.localesPaths": ["src/locales", "src/locales/lang"]
+  "i18n-ally.localesPaths": ["src/locales", "src/locales/lang"],
+  "cSpell.words": ["execa"]
 }
